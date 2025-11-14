@@ -3,22 +3,21 @@
 #include <stdbool.h>
 
 //Funcion para buscar producto por nombre
-bool BuscarProd(char entrada[], char fabricacion[][25])
+bool BuscarProd(char entrada[], char productos[][25])
 {
-    bool encontrado = 0;
+    bool encontrado = false;
     for (int i = 0; i < 5; i++)
     {
 
-        if (strcmp(entrada, fabricacion[i]) == 0)
+        if (strcmp(entrada, productos[i]) == 0)
         {
-            encontrado = 1;
+            encontrado = true;
             return encontrado;
             break;
         }
     }
-    if (encontrado == 0)
+    if (encontrado == false)
     {
-        printf("\n Producto no encontrado.");
         return encontrado;
     }
 }
